@@ -1,70 +1,37 @@
-# README - Dog Breed Classification Project
+**README.txt**  
 
-## Overview
-This project implements a **dog breed classification system** using **Convolutional Neural Networks (CNNs) and ResNet architectures**. The dataset used includes:
-1. **Dog Breed Images (DBI)** dataset
-2. **Stanford Dogs Dataset (SDD)**
+# **Assignment Summary**  
 
-The project includes:
-- A **custom CNN** trained on DBI.
-- **ResNet-18, ResNet-34, and ResNeXt32** models fine-tuned on DBI.
-- **A dataset classification model** distinguishing between SDD and DBI.
-- Comparative analysis of model performances.
-- **Discussions of Tasks 1 to 7 included in the Jupyter Notebook file.**
-- **Answers to Questions 1 to 7 provided in the report.pdf file.**
+This project consists of four main components related to image processing techniques, including the Laplacian of Gaussian (LoG), Histogram of Oriented Gradients (HOG), and Corner Detection. The assignment is structured across multiple Jupyter notebooks and a handwritten report.  
 
-## Prerequisites
-Ensure you have the following installed:
-- **Python 3.8+**
-- **PyTorch**
-- **Torchvision**
-- **Pandas**
-- **Matplotlib**
-- **NumPy**
-- **Google Colab** (recommended for running the code)
-- **Kaggle API** (for dataset download)
+## **Contents**  
 
-## Running the Code
-### 1. **Set Up Environment**
-- If using **Google Colab**, simply upload `dog_breed_classifier_final.ipynb` and run all cells.
-- If running locally, ensure that dependencies are installed:
-  ```sh
-  pip install torch torchvision pandas matplotlib numpy kaggle
-  ```
+### **1. Report (report.pdf)**  
+- Contains handwritten solutions to **Question 1** and **Question 2**, covering the theoretical aspects of the **Laplacian of Gaussian (LoG)** and **Corner Detection**.  
 
-### 2. **Download and Prepare Datasets**
-- The datasets are downloaded directly using `kagglehub` inside the notebook.
-- If running locally, ensure your Kaggle API key is set up.
-- The code automatically processes and subsets the datasets before training.
+### **2. Code Files (assignment.zip)**  
+The **assignment.zip** folder contains three Jupyter notebooks corresponding to different questions. The recommended execution environment is **Google Colab**.  
 
-### 3. **Train and Evaluate Models**
-- The notebook runs different models including:
-  - **Custom CNN on DBI**
-  - **ResNet-18, ResNet-34, and ResNeXt32 fine-tuned on DBI**
-  - **ResNet-18 for dataset classification (SDD vs. DBI)**
-- Each model is trained for **10 epochs** by default.
-- Training and validation accuracy are plotted for performance comparison.
+#### **Q1.ipynb (Optimal Sigma for Square - Q1.3)**  
+- Implements the **experimental approach** to determine the optimal scale \( \sigma \) for detecting a black square using the Laplacian of Gaussian.  
+- The notebook prompts the user to upload an image for testing.  
 
-### 4. **Comparing Performance**
-- The notebook evaluates:
-  - Accuracy on **DBI test set**
-  - Accuracy on **entire SDD dataset**
-  - **Cross-dataset generalization performance**
-  
-### 5. **Customizing Training**
-- Hyperparameters (epochs, learning rate, batch size) can be modified in the training function.
-- Different optimizers (SGD, Adam) can be tested.
+#### **Q3.ipynb (Histogram of Oriented Gradients - Q3.3, Q3.4)**  
+- Implements **HOG feature extraction and visualization**, including magnitude thresholding, gradient direction histograms, and quiver plots.  
+- The notebook requires image uploads based on specific sections:  
+  - **image1.png** for Image 1  
+  - **image2.png** for Image 2  
+  - **NoFlash.jpg** for the NoFlash section  
+  - **Flash.jpg** for the Flash section  
 
-## Expected Outputs
-- Plots showing **training vs. validation accuracy**.
-- **Comparison of CNN vs. ResNet models**.
-- **Cross-dataset performance analysis**.
-- **Final accuracy on DBI and SDD test sets**.
+#### **Q4.ipynb (Corner Detection - Q4.3, Q4.4)**  
+- Implements **corner detection using the second moment matrix and eigenvalue analysis**.  
+- Computes eigenvalues, generates scatter plots, applies thresholding, and visualizes detected corners.  
+- The user is prompted to upload the two required images: **I1 and I2**.  
 
-## Notes
-- If any issues arise with dataset downloads, verify your **Kaggle API configuration**.
-- Training times may vary depending on hardware (Colab GPU recommended).
-- Ensure that the notebook is **run sequentially** to avoid dataset path errors.
-
-For any questions, refer to the comments in the notebook! 
+## **Instructions**  
+1. Extract the `assignment.zip` folder.  
+2. Open **Google Colab** and upload the required Jupyter notebook.  
+3. Follow the upload prompts for images where necessary.  
+4. Run all cells in sequence to generate results.  
 
